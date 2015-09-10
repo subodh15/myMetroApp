@@ -1,0 +1,35 @@
+/* Empty. Add your own CSS if you like */
+
+.item > .item-content {
+  background-color: transparent ;
+}
+
+.Blue { 
+    background-color: #64B5F6 ;
+	color : white;
+}
+
+.Yellow { 
+    background-color: #FFFF8D ;
+	color : #757575;
+}
+
+.Orange { 
+    background-color: #FFB74D ;
+	color : white ;
+}
+
+.Green { 
+    background-color: #81C784 ;
+	color : white;
+}
+
+.Silver { 
+    background-color: #EEEEEE ;
+	color : #757575;
+}
+
+.Red { 
+    background-color: #FF5252 ;
+	color : white;
+}

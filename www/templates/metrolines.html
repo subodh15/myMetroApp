@@ -1,0 +1,10 @@
+<ion-view view-title="Metro Lines ">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-icon-left " ng-repeat="metroLine in metroLines" href="#/app/metroStations/?lineID={{metroLine.id}}&lineName={{metroLine.title}}" ng-class="metroLine.title">
+	  <i class="icon ion-android-train"></i>
+        {{metroLine.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

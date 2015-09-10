@@ -1,0 +1,10 @@
+<ion-view view-title="Metro Lines ">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-icon-left " ng-repeat="incident in incidents" >
+	  <i class="icon ion-alert"></i>
+        {{incident.IncidentType}}, {{incident.Description}}, Updated : {{incident.DateUpdated}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,24 @@
+<ion-view view-title="{{metroLine}} line stations">
+  <ion-content>
+    <ion-list>
+	<div ng-repeat="station in stations" >
+      <ion-item class="item-icon-left item-icon-right" ng-class="metroLine">
+		<i class="{{metroLine}} icon ion-android-train"></i>
+		{{station.Name}} <br>({{station.Address.Street}}, {{station.Address.State}}, {{station.Address.Zip}})
+		<div class="icon">
+		<a ng-href='#/app/stationInfo/?stationcode={{station.Code}}&stationName={{station.Name}}&metroLine={{metroLine}}'>
+				<button class="button button-calm item-icon-right">
+            <i class="icon ion-android-train"></i>
+        </button>
+		</a>
+		<a ng-href='#/app/stationPrediction/?stationcode={{station.Code}}&stationName={{station.Name}}&metroLine={{metroLine}}'>
+				<button class="button button-energized item-icon-right">
+            <i class="icon ion-map"></i>
+        </button>
+		</a>
+        </div>
+      </ion-item>
+	  </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

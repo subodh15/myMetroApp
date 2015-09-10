@@ -1,0 +1,17 @@
+<ion-view view-title="Predictions for {{stationName}}	">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-icon-left" ng-repeat="train in Trains" ng-hide="train.Line === '--' || train.Line === 'No'">
+	  <i class="icon ion-android-train"></i>
+	  
+	  <div ng-if="isTime(train.Min) === true">
+	  {{train.Line}} line train to {{train.Destination}} : Arriving in {{train.Min}} minutes		
+	  </div>
+	  <div ng-if="isTime(train.Min) === false">
+	  {{train.Line}} line train to {{train.Destination}} : Status : {{train.Min}}		
+	  </div>
+
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

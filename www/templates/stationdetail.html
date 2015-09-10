@@ -1,0 +1,23 @@
+<ion-view view-title="Timings for {{stationName}}">
+  <ion-content>
+	<ion-list>
+	<div ng-repeat="(key, train) in StationTimes">
+	<ion-item ng-click="toggleGroup(key)" class="item-stable" ng-if="isDayDetails(key) === true">
+	  <i class="icon ion-android-train"></i>
+       {{key}}
+    </ion-item>
+	<div ng-show="isGroupShown(key)" ng-if="isDayDetails(key) === true">
+	<ion-item>First Trains</ion-item>
+	<ion-item class="item-accordion" ng-repeat="t2 in train.FirstTrains" >
+		<p>Train to <b><span ng-bind="getStationName(t2.DestinationStation)"></span></b> leaves at {{t2.Time}}</p>
+    </ion-item>
+	<ion-item>Last Trains</ion-item>
+	<ion-item class="item-accordion" ng-repeat="t2 in train.LastTrains" >
+		<p>Train to <b><span ng-bind="getStationName(t2.DestinationStation)"></span></b> leaves at {{t2.Time}}</p>
+	</ion-item>
+	</div>
+	
+	</div>
+	</ion-list>
+  </ion-content>
+</ion-view>
